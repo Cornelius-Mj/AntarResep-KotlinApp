@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/homefrag_ic_location"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_location_on_24"/>
+
+        <TextView
+            android:id="@+id/homefrag_hint_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/homefrag_ic_location"
+            android:layout_marginTop="10dp"
+            android:text="Antarkan ke"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/homefrag_edit_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homefrag_hint_location"
+            android:layout_toRightOf="@+id/homefrag_ic_location"
+            android:text="Jalan Sudirman No.58 Jakarta"
+            android:textSize="16sp"
+            android:textColor="@color/Primary"/>
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/ic_baseline_notifications_24"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/homefrag_welcome_text"
+            android:layout_width="280dp"
+            android:layout_height="85dp"
+            android:layout_below="@id/homefrag_edit_location"
+            android:layout_marginTop="30dp"
+            android:text="Find Unique cuisine here in Uniquelux"
+            android:layout_centerHorizontal="true"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <SearchView
+            android:id="@+id/homefrag_searchbox"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/homefrag_welcome_text"
+            android:background="@drawable/searchbox_bg"
+            android:queryHint="Cari hidanganmu disini"
+            android:queryBackground="@android:color/transparent"/>
+        
+        
+
+    </RelativeLayout>
+
+
+</ScrollView>

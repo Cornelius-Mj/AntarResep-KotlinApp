@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WalletPage">
+
+    <FrameLayout
+        android:id="@+id/wallet_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/wallet_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Dompet"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:drawablePadding="40dp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/walletpg_info_money"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/wallet_header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/wallet_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp 0,0"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            android:layout_gravity="center_horizontal"
+            android:padding="5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:background="@color/PrimaryVariant">
+
+            <ImageView
+                android:id="@+id/walletpg_ic_plus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_add_box_24"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Up"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:layout_below="@id/walletpg_ic_plus"
+                android:layout_marginLeft="35dp"/>
+
+            <ImageView
+                android:id="@+id/walletpg_ic_minus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_indeterminate_check_box_24"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withdraw"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:paddingBottom="5dp"
+                android:layout_below="@id/walletpg_ic_minus"
+                android:layout_marginRight="35dp"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/walletpg_historyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Riwayat Transaksi"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/walletpg_info_money"/>
+
+    <TextView
+        android:id="@+id/walletpg_historyToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/walletpg_historyTxt"
+        android:layout_centerHorizontal="true"
+        android:text="Kamu belum punya histori transaksi" />
+
+    <Button
+        android:id="@+id/walletpg_intentSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/walletpg_historyToast"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Cari Barang"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

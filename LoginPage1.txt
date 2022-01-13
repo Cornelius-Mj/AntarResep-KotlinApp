@@ -1,0 +1,155 @@
+activity_login_page1
+
+android:background="@drawable/loginpage_bg"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/rtgLogin"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginRight="57dp"
+            android:layout_marginBottom="70dp"
+
+            android:background="@drawable/frame"
+            >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_centerHorizontal="true"
+                            android:text="LOGIN"
+                            android:textColor="#101010"
+                            android:fontFamily="sans-serif-black"
+                            android:textStyle="bold"
+                            android:textSize="20sp"/>
+
+                        <EditText
+                            android:id="@+id/edUsername"
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/tvLogin"
+                            android:layout_marginTop="15dp"
+                            android:layout_centerHorizontal="true"
+                            android:hint="Masukkan Username"
+                            android:textSize="13sp"
+                            android:textColor="#808080"
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5sp"
+                            android:paddingLeft="10dp"
+                            android:background="@drawable/edtbackground"
+                            />
+
+                        <EditText
+                            android:id="@+id/edPassword"
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:layout_below="@+id/edUsername"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="15dp"
+                            android:hint="Masukkan Password"
+                            android:textSize="13sp"
+                            android:textColor="#808080"
+                            android:fontFamily="sans-serif-condensed"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5sp"
+                            android:paddingLeft="10dp"
+                            android:inputType="textPassword"
+                            android:background="@drawable/edtbackground"/>
+
+                        <Button
+                            android:id="@+id/btnLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/edPassword"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/custom_btnenter"
+                            android:text="Login"
+                            android:textSize="13sp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvOR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/btnLogin"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="OR"/>
+
+                        <Button
+                            android:id="@+id/btnRegister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/custom_btnenter"
+                            android:text="Register"
+                            android:textSize="13sp"
+                            />
+
+
+                </RelativeLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+	LoginPage1.kt
+
+        val context = this
+        var username: String = edUsername.text.toString()
+        var dbHelper = DBHelper(context)
+
+        btnLogin.setOnClickListener {
+            if (edUsername.text.toString().length > 0 && edPassword.text.toString().length > 0) {
+                val user = User(edUsername.text.toString(),edPassword.text.toString())
+
+                try {
+                    if (dbHelper.dataIsTrue(user)) {
+                        val Homepage = Intent(this, Homepage::class.java)
+                        startActivity(Homepage)
+                    }
+
+                    else {
+                        Toast.makeText(this, "Data not found.", Toast.LENGTH_SHORT).show()
+                        openRegistrasi()
+                    }
+                }
+
+                catch (e: Exception) {
+                    Toast.makeText(context,e.toString(), Toast.LENGTH_LONG).show()
+                }
+            }
+            else {
+                Toast.makeText(this, "Data not found, please register.", Toast.LENGTH_SHORT).show()
+                openRegistrasi()
+            }
+        }
+
+        btnRegister.setOnClickListener {
+            Toast.makeText(this, "Button Register Pressed", Toast.LENGTH_SHORT).show()
+//            dbHelper.deleteAllData()
+//            dbHelper.dropTable()
+//            dbHelper.createTable()
+            openRegistrasi()
+        }
+
+fun openRegistrasi(){
+	val Registrasi = Intent(this, Registrasi::class.java).putExtra("username", edUsername.text.toString())
+        startActivity(Registrasi)
+}

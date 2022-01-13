@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notification_fragment.PesanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wallet_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Notification_UniquluxLogo"
+            android:src="@drawable/logo_splash"
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/Notification_UniquluxName"
+            android:layout_toRightOf="@+id/Notification_UniquluxLogo"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AntarResep"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Notification_UniquluxTxt"
+            android:layout_below="@+id/Notification_UniquluxName"
+            android:layout_toRightOf="@id/Notification_UniquluxLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Masih takut gunain AntarResep? Kami ada diskon khusus penggunaan pertama!"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

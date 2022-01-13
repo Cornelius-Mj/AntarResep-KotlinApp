@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ic_price"
+        android:icon="@drawable/ic_baseline_price_change_24"
+        android:title="Harga dan Review"/>
+
+    <item
+        android:id="@+id/ic_recipes"
+        android:icon="@drawable/ic_baseline_article_24"
+        android:title="Tutorial Masak"/>
+
+</menu>

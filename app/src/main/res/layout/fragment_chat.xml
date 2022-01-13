@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".notification_fragment.ChatFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/wallet_bg">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/Notification_MasakkupediaLogo"
+            android:src="@drawable/logochat"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/Notification_MasakkupediaName"
+            android:layout_toRightOf="@+id/Notification_MasakkupediaLogo"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masakkupedia"
+            android:textSize="14sp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/Notification_MasakkupediaTxt"
+            android:layout_below="@+id/Notification_MasakkupediaName"
+            android:layout_toRightOf="@id/Notification_MasakkupediaLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="Kami memiliki menu terbaru! Buruan utk..."
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</FrameLayout>

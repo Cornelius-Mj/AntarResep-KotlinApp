@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipesActivity">
+
+    <FrameLayout
+        android:id="@+id/Recipes_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/wallet_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recipes"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="25dp"
+            android:drawablePadding="40dp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/Recipes_header">
+
+        <Button
+            android:id="@+id/MoveToDetail_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wallet_bg">
+
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="83dp"
+                android:layout_height="78dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/food_pic1" />
+            <TextView
+                android:id="@+id/food_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/food_name_1"
+                android:textColor="@color/PrimaryVariant"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:layout_toRightOf ="@+id/image_1"/>
+            <TextView
+                android:id="@+id/food_detail1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="@string/food_detail_1"
+                android:textColor="@color/PrimaryVariant"
+                android:textStyle="italic"
+                android:textSize="12sp"
+                android:layout_toRightOf ="@+id/image_1"
+                android:layout_below ="@+id/food_name1"/>
+            <TextView
+                android:id="@+id/food_time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:text="@string/food_time_1"
+                android:textColor="@color/PrimaryVariant"
+                android:layout_toRightOf ="@id/image_1"
+                android:layout_below="@id/food_detail1"
+                android:padding="6dp"/>
+            <TextView
+                android:id="@+id/food_price1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+                android:text="@string/food_price_1"
+                android:textSize="12sp"
+                android:textColor="@color/PrimaryVariant"
+                android:layout_toRightOf ="@id/food_time1"
+                android:layout_below="@id/food_detail1"
+                android:padding="6dp"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/frame_1">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/searchbox_bg">
+
+        <TextView
+            android:id="@+id/Recipes_filterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:drawableLeft="@drawable/ic_baseline_sort_24"
+            android:text="Filter"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/PrimaryVariant"
+            />
+    </FrameLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+

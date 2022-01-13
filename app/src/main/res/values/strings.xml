@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">AntarResep</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="food_name_1">Orange Tofu and Brown Rice</string>
+    <string name="food_detail_1">with snow peas, Kohlrabi and Cashews</string>
+    <string name="food_time_1">35 mins</string>
+    <string name="food_price_1">Rp 7000/dish</string>
+    <string name="food_desc_1">
+        For this vibrant dish, you’ll sear marinated tofu and glaze it in the pan with a sweet and savory mix of fresh orange juice,
+        orange marmalade, spicy sambal, and more, then serve it over sautéed vegetables and hearty brown rice.
+        A garnish of roasted cashews lends a bit of nutty flavor and crunch to each bite.
+    </string>
+    <string name="food_quantity_1">
+        14 oz \n
+        ½ cup \n
+        1 \n
+        1 \n
+        4 oz \n
+        2 \n
+        1 Tbsp \n
+        2 Tbsps \n
+        1 Tbsp \n
+        3 Tbsps \n
+        3 Tbsps \n
+        2 Tbsps \n
+    </string>
+    <string name="food_ingridient_1">
+        Firm Tofu\n
+        Brown Rice\n
+        Navel Orange\n
+        Kohlrabi\n
+        Snow Peas\n
+        Scallions\n
+        Sesame Oil\n
+        Orange Marmalade\n
+        Sambal Oelek\n
+        Soy-Miso Sauce\n
+        Roasted Cashews\n
+        Coconut Aminos (Seasoning Sauce)\n
+    </string>
+    <string name="food_tutorial_1">
+        Press the tofu\n
+        Prepare the ingredients and make the glaze\n
+        Cook the rice\n
+        Dice and marinate the tofu\n
+        Cook the vegetables\n
+        Glaze the tofu and serve your dish\n
+    </string>
+
+    <string name="food_name_2">Cheesy Fried Pickle Burger</string>
+    <string name="food_detail_2">with Corn and Garlic-Herb Butter</string>
+    <string name="food_time_2">30 mins</string>
+    <string name="food_price_2">Rp 11000/dish</string>
+    <string name="food_desc_2">
+        These delicious USDA Prime Niman Ranch ground beef burgers are layered with crisp, golden fried pickle chips and creamy dijonnaise.
+        We are pairing them with the perfect summer side—corn on the cob—topped with our new spreadable butter;
+        a compound butter mixed with tangy garlic and verdant herbs for rich, flavorful finish.
+    </string>
+    <string name="food_quantity_2">
+        12 oz \n
+        2 \n
+        2 ears \n
+        2 cloves \n
+        1 \n
+        ¼ cup \n
+        3 oz \n
+        2 oz \n
+        ¼ cup \n
+        1 oz \n
+        1 Tbsp \n\n\n
+    </string>
+    <string name="food_ingridient_2">
+        Usda Prime Ground Beef \n
+        Challah Buns \n
+        Of Corn \n
+        Garlic \n
+        Lemon \n
+        Tempura Mix \n
+        Pickle Chips \n
+        Smoked Gouda Cheese \n
+        Dijonnaise \n
+        Garlic and Herb Spreadable Butter \n
+        Southern Spice Blend (Onion Powder \n
+        , Garlic Powder, Ground Yellow Mustard \n
+        , Smoked Paprika and Cayenne Pepper) \n
+    </string>
+
+    <string name="food_name_3">Creamy Italian Seared Chicken</string>
+    <string name="food_detail_3">with Mash Potatoes and Glazed Veggie</string>
+    <string name="food_time_3">40 mins</string>
+    <string name="food_price_3">Rp 8000/dish</string>
+    <string name="food_desc_3">
+        This simple, flavorful dish highlights our blend of classic Italian seasonings (basil, sage, oregano, and more),
+        which lend bold, earthy flavor to both our seared chicken and the creamy dressing spooned on top.
+        A side of smooth mashed potatoes makes for a comforting, hearty accompaniment,
+        while a vibrant duo of juicy tomatoes and tender zucchini glazed with sweet balsamic vinegar adds incredible richness.
+    </string>
+    <string name="food_quantity_3">
+        2 \n
+        2 cloves \n
+        ¾ lb \n
+        1 \n
+        4 oz \n
+        1 Tbsp \n
+        2 Tbsps \n
+        ¼ cup \n
+        2 Tbsps \n
+        2 Tbsps \n
+        1 Tbsp \n\n\n
+    </string>
+    <string name="food_ingridient_3">
+        Boneless, Skinless Chicken Breasts \n
+        Garlic \n
+        Golden Potatoes \n
+        Zucchini \n
+        Grape Tomatoes \n
+        Dijon Mustard \n
+        Balsamic Vinegar \n
+        Grated Parmesan Cheess \n
+        Mayonnaise \n
+        Crème Fraîche \n
+        Italian Seasoning (Whole Dried \n
+        Basil, Sage, Oregano, Savory, Rosemary \n
+        , Thyme and Marjoram) \n
+    </string>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrasiPage"
+    android:background="@drawable/loginpage_bg">
+
+        <RelativeLayout
+            android:id="@+id/rtgRegistrasi"
+            android:layout_width="300dp"
+            android:layout_height="360dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/login_frame"
+            >
+
+
+                <TextView
+                    android:id="@+id/tvRegistrasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registrasi"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Email :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvEmail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Masukkan Email"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/searchbox_bg"/>
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/edEmail"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Username :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvUsername"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Masukkan Username"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/searchbox_bg"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/edUsername"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Password :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvPassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Masukkan Password"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:inputType="textPassword"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/searchbox_bg"
+                    />
+                <TextView
+                    android:id="@+id/tvKonfirmPw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/edPassword"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Konfirmasi Password :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edKonfirmPw"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvKonfirmPw"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Ketikkan kembali password di sini"
+                    android:inputType="textPassword"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/searchbox_bg"
+                    />
+
+                <Button
+                    android:id="@+id/btnRegistrasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/searchbox_bg"
+                    android:text="Registrasi"
+                    android:textSize="8sp"
+                    />
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

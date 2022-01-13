@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchPage">
+
+    <RelativeLayout
+        android:id="@+id/searchpg_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/searchpg_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <ImageView
+            android:id="@+id/homefrag_ic_location"
+            android:layout_toRightOf="@id/searchpg_back"
+            android:layout_marginLeft="30dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_baseline_location_on_24"/>
+
+        <TextView
+            android:id="@+id/homefrag_hint_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/homefrag_ic_location"
+            android:layout_marginTop="10dp"
+            android:text="Antarkan ke"
+            android:textSize="14sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/homefrag_edit_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homefrag_hint_location"
+            android:layout_toRightOf="@+id/homefrag_ic_location"
+            android:text="Jalan Sudirman No.58 Jakarta"
+            android:textSize="16sp"
+            android:textColor="@color/Primary"/>
+    </RelativeLayout>
+
+    <SearchView
+        android:id="@+id/searchpg_searchbox"
+        android:layout_below="@id/searchpg_header"
+        android:layout_width="250dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/searchbox_bg"
+        />
+
+    <TextView
+        android:id="@+id/searchpg_historyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchpg_searchbox"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:text="Histori Pencarian"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/searchpg_rec_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchpg_historyTxt">
+
+        <Button
+            android:id="@+id/searchpg_rec_1"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:backgroundTint="#DFF2FD"
+            android:text="Burger"
+            android:textSize="10sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/searchpg_rec_2"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@id/searchpg_rec_1"
+            android:backgroundTint="#F2E9FE"
+            android:text="Corn"
+            android:textSize="10sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/searchpg_rec_3"
+            android:layout_width="75dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_toRightOf="@id/searchpg_rec_2"
+            android:backgroundTint="#FDF4F5"
+            android:text="Salad"
+            android:textSize="10sp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_below="@id/searchpg_rec_box"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/SecondaryInfo"
+        android:text="Karena kami belum memiliki menu\n maka hasil yang ditampilkan hanya 2 menu"
+        android:textAlignment="center"
+        android:textColor="@color/PrimaryVariant"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+

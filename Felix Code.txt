@@ -1,0 +1,756 @@
+        supportActionBar?.hide()
+
+        Handler().postDelayed({
+            val moveintent = Intent(this@MainActivity, HomePage::class.java)
+            startActivity(moveintent)
+            finish()
+        }, 2500)
+
+activity_homepage.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homepage">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/homepage_bottomNavigation"
+        android:layout_width="420dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        app:itemBackground="@color/white"
+        app:itemIconTint="@color/green_200"
+        app:itemTextColor="#000000"
+        app:menu="@menu/homepage_navbar"/>
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</RelativeLayout>
+
+
+
+fragment_fr_homepage_home.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".frHomepageHome">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ic_Gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_homepage_gps"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="10dp"
+            android:paddingTop="15dp"/>
+
+        <RelativeLayout
+            android:id="@+id/rlAlamat"
+            android:layout_width="293dp"
+            android:layout_height="63dp"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/ic_Gps"
+            android:layout_alignTop="@id/ic_Gps"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAntarkan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10sp"
+                android:text="Antarkan ke"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvAntarkan"
+                android:paddingLeft="10sp"
+                android:backgroundTint="@color/white"
+                android:hint="Jalan Sudirman No.58 Jakarta"
+                android:text=""
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:paddingTop="5dp"
+            android:layout_toRightOf="@id/rlAlamat"
+            android:layout_alignParentRight="true">
+
+            <Button
+                android:id="@+id/btnChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <ImageView
+                android:id="@+id/circleMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/green_circle" />
+
+            <ImageView
+                android:id="@+id/icMessage"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:layout_alignStart="@id/circleMessage"
+                android:layout_alignEnd="@id/circleMessage"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_homepage_message"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMainPicture"
+            android:layout_width="390dp"
+            android:layout_height="215dp"
+            android:layout_below="@id/rlAlamat"
+            android:paddingTop="5dp"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/white">
+
+            <ImageView
+                android:id="@+id/imgHomepageMartabak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:layout_centerInParent="true"
+                android:src="@drawable/hivincent"/>
+
+            <LinearLayout
+                android:id="@+id/lnSearch"
+                android:layout_width="303dp"
+                android:layout_height="43dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:weightSum="1"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/homepage_searchbar">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_homepage_search"
+                    android:paddingTop="10sp"
+                    android:paddingLeft="8sp"
+                    android:layout_weight=".8613"
+                    />
+
+                <EditText
+                    android:id="@+id/edHomepageSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".1387"
+                    android:background="@android:color/transparent"
+                    android:backgroundTint="@color/white"
+                    android:hint="Type something"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPromo"
+            android:layout_width="391dp"
+            android:layout_height="140dp"
+            android:layout_below="@id/rlMainPicture"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:id="@+id/tvPromo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="3dp"
+                android:layout_marginLeft="3dp"
+                android:paddingBottom="3dp"
+                android:text="Promo dan Diskon"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvPromo"
+                android:scrollbars="none">
+
+                <RelativeLayout
+                    android:id="@+id/lnPromo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true">
+
+                    <ImageView
+                        android:id="@+id/imgPromo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:paddingRight="5dp"
+                        android:src="@drawable/promo1"/>
+
+                    <ImageView
+                        android:id="@+id/imgPromo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/promo2"
+                        android:layout_toRightOf="@id/imgPromo1"/>
+
+                </RelativeLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlEWallet"
+            android:layout_width="365dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/rlPromo"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/solid_green"
+            >
+
+            <RelativeLayout
+                android:layout_width="345dp"
+                android:layout_height="55dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/solid_white">
+
+                <Button
+                    android:id="@+id/btnWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    />
+
+                <ImageView
+                    android:id="@+id/icEWallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_homepage_wallet"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="7dp"/>
+
+                <LinearLayout
+                    android:layout_width="349dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/icEWallet"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.3696"
+                        android:text="  Rp 0"
+                        android:gravity="center_vertical"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.6304"
+                        android:text="  Buka E-Wallet"
+                        android:gravity="center_vertical"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCategories"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlEWallet"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="104dp"
+                android:layout_height="29dp"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/btnCategories"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLainnya"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="3dp"
+                android:layout_width="67dp"
+                android:layout_height="22dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingEnd="5sp"
+                    android:text="Lainnya"
+                    android:textColor="@color/green_200"
+                    />
+
+                <Button
+                    android:id="@+id/btnLainnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCategoriesContent"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/rlLainnya"
+                android:layout_marginTop="15dp"
+                >
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ctgMeaty"
+                    android:layout_width="73dp"
+                    android:layout_height="110dp"
+                    app:cardCornerRadius="40dp"
+                    android:layout_marginRight="25dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/btnCtgMeaty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/homepage_ctg_bg_red"/>
+
+                        <ImageView
+                            android:id="@+id/imgMeaty"
+                            android:layout_width="63dp"
+                            android:layout_gravity="center"
+                            android:layout_height="60dp"
+                            android:scaleType="fitCenter"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/ctgmeaty"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgMeaty"
+                            android:layout_centerHorizontal="true"
+                            android:text="Meaty"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ctgVegan"
+                    android:layout_width="73dp"
+                    android:layout_height="110dp"
+                    app:cardCornerRadius="40dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@id/ctgMeaty">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/btnCtgVegan"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/homepage_ctg_bg_yellow"/>
+
+                        <ImageView
+                            android:id="@+id/imgVegan"
+                            android:layout_width="63dp"
+                            android:layout_gravity="center"
+                            android:layout_height="60dp"
+                            android:scaleType="fitCenter"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/ctgvegan"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgVegan"
+                            android:layout_centerHorizontal="true"
+                            android:text="Vegan"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ctgSeafood"
+                    android:layout_width="73dp"
+                    android:layout_height="110dp"
+                    app:cardCornerRadius="40dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_toRightOf="@id/ctgVegan">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/btnCtgSeafood"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/homepage_ctg_bg_blue"/>
+
+                        <ImageView
+                            android:id="@+id/imgSeafood"
+                            android:layout_width="63dp"
+                            android:layout_gravity="center"
+                            android:layout_height="60dp"
+                            android:scaleType="fitCenter"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/ctgseafood"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgSeafood"
+                            android:layout_centerHorizontal="true"
+                            android:text="Seafood"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/ctgNoodles"
+                    android:layout_width="73dp"
+                    android:layout_height="110dp"
+                    app:cardCornerRadius="40dp"
+                    android:background="@drawable/homepage_categories_bg"
+                    android:layout_toRightOf="@id/ctgSeafood">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/btnCtgNoodles"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"/>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/homepage_ctg_bg_orange"/>
+
+                        <ImageView
+                            android:id="@+id/imgNoodles"
+                            android:layout_width="63dp"
+                            android:layout_gravity="center"
+                            android:layout_height="60dp"
+                            android:scaleType="fitCenter"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="5dp"
+                            android:src="@drawable/ctgnoodles"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/imgNoodles"
+                            android:layout_centerHorizontal="true"
+                            android:text="Noodles"
+                            android:textSize="11sp"
+                            android:textStyle="bold"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+fragment_fr_homepage_logistics.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".frHomepageLogistics"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is logistics fragment"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>
+
+
+frHomepageHome.kt
+
+package com.example.uniquelux
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.activity_homepage.*
+
+class Homepage : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
+        setContentView(R.layout.activity_homepage)
+
+        val frHomepage = HomeFragment()
+        //val frDeliverypage = DeliveryFragment()
+
+        setCurrentFragment(frHomepage)
+
+        homepage_bottomNavigation.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.ic_home -> setCurrentFragment(frHomepage)
+                //R.id.ic_shipping -> setCurrentFragment(frDeliverypage)
+            }
+            true
+        }
+    }
+
+    fun setCurrentFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flFragment, fragment)
+            commit()
+        }
+    }
+}
+
+
+frHomepageHome.kt
+
+package com.example.uniquelux
+
+import android.content.Intent
+import android.os.Bundle
+import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.fragment_fr_homepage_home.*
+
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [frHomepageHome.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class frHomepageHome : Fragment() {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
+
+    var context = this
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
+        }
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val v:View = inflater.inflate(R.layout.fragment_fr_homepage_home, container, false)
+
+        val edtHomepageSearch = v.findViewById<EditText>(R.id.edHomepageSearch)
+//        edtHomepageSearch.setOnFocusChangeListener { v, hasFocus ->  } {
+//
+//        }
+
+        //cara intent dri fragment ke activity
+//        val WalletBtn = v.findViewById<ImageView>(R.id.homefrag_wallet_btn)
+//
+//        WalletBtn.setOnClickListener{
+//            val IntentWallet = Intent(this.getContext(), WalletPage::class.java)
+//            startActivity(IntentWallet)
+//        }
+
+        return v
+    }
+
+    companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment frHomepageHome.
+         */
+        // TODO: Rename and change types and number of parameters
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            frHomepageHome().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
+    }
+}
+
+
+frHomepageLogistics.kt
+
+package com.example.uniquelux
+
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
+
+/**
+ * A simple [Fragment] subclass.
+ * Use the [frHomepageLogistics.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class frHomepageLogistics : Fragment(R.layout.fragment_fr_homepage_logistics) {
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
+
+    companion object {
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment frHomepageLogistics.
+         */
+        // TODO: Rename and change types and number of parameters
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            frHomepageLogistics().apply {
+                arguments = Bundle().apply {
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
+                }
+            }
+    }
+}

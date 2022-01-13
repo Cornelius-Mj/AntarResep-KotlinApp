@@ -1,0 +1,204 @@
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/rtgRegistrasi"
+            android:layout_width="300dp"
+            android:layout_height="360dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="57dp"
+            android:layout_marginRight="57dp"
+            android:layout_marginBottom="70dp"
+            android:background="@drawable/frame"
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvRegistrasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registrasi"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Email :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvEmail"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Masukkan Email"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edtbackground"/>
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/edEmail"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Username :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvUsername"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Masukkan Username"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edtbackground"
+                    />
+
+                <TextView
+                    android:id="@+id/tvPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/edUsername"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Password :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvPassword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Masukkan Password"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:inputType="textPassword"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edtbackground"
+                    />
+                <TextView
+                    android:id="@+id/tvKonfirmPw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/edPassword"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="Konfirmasi Password :"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    />
+
+                <EditText
+                    android:id="@+id/edKonfirmPw"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvKonfirmPw"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:hint="Ketikkan kembali password di sini"
+                    android:inputType="textPassword"
+                    android:textSize="13sp"
+                    android:textColor="#808080"
+                    android:fontFamily="sans-serif-condensed"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5sp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edtbackground"
+                    />
+
+                <Button
+                    android:id="@+id/btnRegistrasi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/custom_btnenter"
+                    android:text="Registrasi"
+                    android:textSize="8sp"
+                    />
+
+            </RelativeLayout>
+
+
+    </FrameLayout>
+
+    </LinearLayout>
+
+
+        val context = this
+        var dbHelper = DBHelper(context)
+
+        btnRegistrasi.setOnClickListener {
+            if (edEmail.text.toString().length > 0 && edUsername.text.toString().length > 0
+                && edPassword.text.toString().length > 0 && edKonfirmPw.text.toString().length > 0 &&
+                (edPassword.text.toString() == edKonfirmPw.text.toString())) {
+                var user = User(edEmail.text.toString(), edUsername.text.toString(), edPassword.text.toString())
+
+                dbHelper.insertData(user)
+
+                Toast.makeText(context, "Registered succesfully, please log in!", Toast.LENGTH_SHORT).show()
+
+                val LoginPage1 = Intent(this, LoginPage1::class.java)
+                startActivity(LoginPage1)
+            }
+
+            else {
+                Toast.makeText(context, "Please fill correctly.", Toast.LENGTH_SHORT).show()
+            }
+        }

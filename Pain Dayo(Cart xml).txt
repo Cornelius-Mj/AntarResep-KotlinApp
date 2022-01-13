@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home_fragment.CartFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <FrameLayout
+                android:id="@+id/cart_header"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/wallet_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keranjang"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:drawablePadding="50dp"
+                    android:drawableLeft="@drawable/ic_baseline_arrow_back_ios_24"/>
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/cartfrag_info"
+                android:layout_below="@+id/cart_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/SecondaryInfo">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pemesanan hanya berlaku untuk restoran yang sama"
+                    android:textColor="@color/PrimaryVariant"
+                    android:textSize="14sp"
+                    android:padding="4dp"/>
+            </FrameLayout>
+            <RelativeLayout
+                android:id="@+id/cartfrag_restaurant"
+                android:layout_below="@id/cartfrag_info"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/cartfrag_restaurantLogo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/logochat"
+                    android:layout_toRightOf="@id/cartfrag_restaurantName"/>
+                <TextView
+                    android:id="@+id/cartfrag_restaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Restoran Masakkupedia"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold" />
+                <TextView
+                    android:id="@+id/cartfrag_restaurantLoc"
+                    android:layout_below="@id/cartfrag_restaurantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="Jakarta Barat, Sawah Besar"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/cartfrag_locationframe"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_below="@id/cartfrag_restaurant"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/wallet_bg"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/cartfrag_ic_location"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ic_baseline_location_on_24"/>
+
+                <TextView
+                    android:id="@+id/cartfrag_hint_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/cartfrag_ic_location"
+                    android:layout_marginTop="10dp"
+                    android:text="Antarkan ke"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/cartfrag_edit_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cartfrag_hint_location"
+                    android:layout_toRightOf="@+id/cartfrag_ic_location"
+                    android:text="Jalan Sudirman No.58 Jakarta"
+                    android:textSize="16sp"
+                    android:textColor="@color/Primary"/>
+
+                <TextView
+                    android:id="@+id/cartfrag_ShipmentTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cartfrag_edit_location"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Biaya Pengantaran"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold" />
+                <TextView
+                    android:id="@+id/cartfrag_ShipmentCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cartfrag_edit_location"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Rp 11,000"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_bold"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/SecondaryInfo">
+
+        <RelativeLayout
+            android:id="@+id/cartinfo_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/cartinfo_row_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Total Item"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/cartinfo_rowNum_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="Rp 62,000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/cartinfo_row_2"
+                android:layout_below="@id/cartinfo_row_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Pengantaran"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/cartinfo_rowNum_2"
+                android:layout_below="@id/cartinfo_rowNum_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:text="Rp 11,000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/cartinfo_row_3"
+                android:layout_below="@id/cartinfo_row_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="Total Biaya"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/cartinfo_rowNum_3"
+                android:layout_below="@id/cartinfo_rowNum_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:text="Rp 73,000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/black"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/cartfrag_ConfirmBtn"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/cartinfo_frame"
+            android:layout_centerHorizontal="true"
+            android:background="@color/PrimaryVariant"
+            android:layout_marginTop="10dp"
+            android:text="Konfirmasi Pesanan"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+</RelativeLayout>

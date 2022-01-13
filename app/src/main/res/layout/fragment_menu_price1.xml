@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menu_detail.MenuPrice1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/Menu1_Komentar"
+        android:background="@color/SecondaryInfo"/>
+    <TextView
+        android:id="@+id/Menu1_Price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Price :   Rp 7,000 / portion"
+        android:textColor="@color/PrimaryVariant"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_below="@id/Menu1_Price"
+        android:id="@+id/Menu1_Komentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Komentar"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="35dp" />
+
+    <TextView
+        android:layout_below="@id/Menu1_Komentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama komenter : Elfraz\n\n Makanan ini sangat unik, rasanya sedikit asam namun manis dan cocok bagi mereka yg vegetarian"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_margin="45dp"
+        android:background="@drawable/wallet_bg"
+        />
+
+    <Button
+        android:id="@+id/Menu1_AddtoCart"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="14sp"
+        android:text="Tambah ke daftar belanja"/>
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
